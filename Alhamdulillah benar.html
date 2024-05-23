@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maaf yaa sayangkuu</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent text wrapping */
+  position: relative;
+  animation: moveText 5s linear infinite; /* Animation property added */
+}
+
+.result {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+.button button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(-100%); /* Start position off-screen */
+  }
+  100% {
+    transform: translateX(100%); /* End position off-screen */
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="title">Maaf yaa sayangkuu</div>
+  <div class="text">AYOK MAKAN BOCI</div>
+  <div class="result" id="result"></div> <!-- Result div added -->
+  <div class="button">
+    <button onclick="mw()">mw</button>
+    <button onclick="g()">g</button>
+  </div>
+</div>
+
+<script>
+function mw() {
+  const resultDiv = document.getElementById('result');
+  if (resultDiv.textContent !== 'Nanti jam 7 malam yaa <3') {
+    resultDiv.textContent = 'Nanti jam 7 malam yaa <3';
+  }
+}
+
+function g() {
+  const resultDiv = document.getElementById('result');
+  if (resultDiv.textContent !== 'Kok teken ini ):<') {
+    resultDiv.textContent = 'Kok teken ini ):<';
+  }
+}
+</script>
+</body>
+</html>
